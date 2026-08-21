@@ -19,7 +19,9 @@
   --ink:#0F172A;
   --muted:#64748B;
 }
-body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
+html{overflow-x:hidden;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;overflow-x:hidden;}
+img{max-width:100%;}
 .font-display{font-family:'Sora',sans-serif;}
 .bg-soft-grid{
   background-image:radial-gradient(circle at 1px 1px, rgba(29,100,242,0.10) 1px, transparent 0);
@@ -48,10 +50,10 @@ body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
 
 <!-- Navigation -->
 <header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-100">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2.5">
-      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--blue-600)] to-[var(--blue-900)] flex items-center justify-center text-white font-display font-bold text-sm shadow-soft">US</div>
-      <span class="font-display font-bold text-lg tracking-tight text-[var(--blue-900)]">United Surgicals</span>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-3">
+    <a href="#" class="flex items-center gap-2 sm:gap-2.5 shrink-0">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--blue-600)] to-[var(--blue-900)] flex items-center justify-center text-white font-display font-bold text-sm shadow-soft shrink-0">US</div>
+      <span class="font-display font-bold text-base sm:text-lg tracking-tight text-[var(--blue-900)] whitespace-nowrap">United Surgicals</span>
     </a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
       <a href="#catalog" class="hover:text-[var(--blue-600)] transition-colors">Products</a>
@@ -59,10 +61,25 @@ body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
       <a href="#values" class="hover:text-[var(--blue-600)] transition-colors">About Us</a>
       <a href="#faq" class="hover:text-[var(--blue-600)] transition-colors">Resources</a>
     </nav>
-    <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-[var(--blue-600)] text-white text-sm font-semibold px-5 py-2.5 shadow-soft hover:bg-[var(--blue-700)] transition-colors">
+    <div class="flex items-center gap-2 sm:gap-3">
+      <a href="#contact" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-[var(--blue-600)] text-white text-sm font-semibold px-5 py-2.5 shadow-soft hover:bg-[var(--blue-700)] transition-colors whitespace-nowrap">
+        Get in Touch
+      </a>
+      <button id="mobileMenuBtn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full border border-slate-200 text-[var(--blue-900)]">
+        <i data-lucide="menu" id="mobileMenuIconOpen" style="width:20px;height:20px"></i>
+        <i data-lucide="x" id="mobileMenuIconClose" style="width:20px;height:20px" class="hidden"></i>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden border-t border-slate-100 bg-white px-4 sm:px-6 py-4 flex flex-col gap-1 text-sm font-medium text-slate-600">
+    <a href="#catalog" class="py-2.5 hover:text-[var(--blue-600)] transition-colors">Products</a>
+    <a href="#services" class="py-2.5 hover:text-[var(--blue-600)] transition-colors">Services</a>
+    <a href="#values" class="py-2.5 hover:text-[var(--blue-600)] transition-colors">About Us</a>
+    <a href="#faq" class="py-2.5 hover:text-[var(--blue-600)] transition-colors">Resources</a>
+    <a href="#contact" class="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--blue-600)] text-white text-sm font-semibold px-5 py-3 shadow-soft hover:bg-[var(--blue-700)] transition-colors">
       Get in Touch
     </a>
-  </div>
+  </nav>
 </header>
 
 <main>
@@ -98,25 +115,25 @@ body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
 
       <div class="relative animate-fadeUp delay-200">
         <div class="relative rounded-[2rem] overflow-hidden shadow-soft border border-slate-100">
-          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200" alt="Medical team reviewing equipment" class="w-full h-[460px] object-cover">
+          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200" alt="Medical team reviewing equipment" class="w-full h-[320px] sm:h-[400px] lg:h-[460px] object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-[var(--blue-900)]/30 via-transparent to-transparent"></div>
         </div>
 
         <!-- Floating stat card -->
-        <div class="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-soft border border-slate-100 px-6 py-5 flex items-center gap-4 animate-float">
-          <div class="w-12 h-12 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)]">
+        <div class="absolute -bottom-6 left-4 sm:-bottom-8 sm:-left-8 bg-white rounded-2xl shadow-soft border border-slate-100 px-4 py-3.5 sm:px-6 sm:py-5 flex items-center gap-3 sm:gap-4 animate-float max-w-[calc(100%-2rem)] sm:max-w-none">
+          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0">
             <i data-lucide="calendar-check" style="width:22px;height:22px"></i>
           </div>
           <div>
-            <p class="font-display font-bold text-2xl text-[var(--blue-900)] leading-none">33+</p>
+            <p class="font-display font-bold text-xl sm:text-2xl text-[var(--blue-900)] leading-none">33+</p>
             <p class="text-xs text-slate-500 mt-1">Years in Service</p>
           </div>
         </div>
 
         <!-- Floating pill -->
-        <div class="absolute -top-6 -right-6 bg-white rounded-full shadow-soft border border-slate-100 px-5 py-3 flex items-center gap-2">
-          <i data-lucide="shield-check" style="width:16px;height:16px" class="text-[var(--blue-600)]"></i>
-          <span class="text-xs font-semibold text-[var(--blue-900)]">Certified Equipment</span>
+        <div class="absolute -top-4 right-4 sm:-top-6 sm:-right-6 bg-white rounded-full shadow-soft border border-slate-100 px-3.5 py-2.5 sm:px-5 sm:py-3 flex items-center gap-2">
+          <i data-lucide="shield-check" style="width:16px;height:16px" class="text-[var(--blue-600)] shrink-0"></i>
+          <span class="text-xs font-semibold text-[var(--blue-900)] whitespace-nowrap">Certified Equipment</span>
         </div>
       </div>
     </div>
@@ -201,12 +218,12 @@ body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
   <section id="services" class="py-28">
     <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
       <div class="relative">
-        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=900" alt="Healthcare facility" class="rounded-[1.75rem] w-full h-[380px] object-cover shadow-soft">
-        <div class="absolute -bottom-10 -right-6 w-52 rounded-2xl overflow-hidden shadow-soft border-4 border-white">
-          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=900&auto=format&fit=crop" alt="Healthcare excellence" class="w-full h-40 object-cover">
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=900" alt="Healthcare facility" class="rounded-[1.75rem] w-full h-[280px] sm:h-[340px] lg:h-[380px] object-cover shadow-soft">
+        <div class="hidden sm:block absolute -bottom-10 -right-6 w-52 rounded-2xl overflow-hidden shadow-soft border-4 border-white">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=900&auto=format&fit=crop" alt="Healthcare excellence" class="w-full h-28 sm:h-40 object-cover">
         </div>
-        <div class="absolute top-6 -left-6 bg-white rounded-2xl shadow-soft border border-slate-100 px-5 py-4">
-          <p class="font-display font-bold text-2xl text-[var(--blue-900)] leading-none">500+</p>
+        <div class="absolute top-4 left-2 sm:top-6 sm:-left-6 bg-white rounded-2xl shadow-soft border border-slate-100 px-4 py-3 sm:px-5 sm:py-4">
+          <p class="font-display font-bold text-xl sm:text-2xl text-[var(--blue-900)] leading-none">500+</p>
           <p class="text-xs text-slate-500 mt-1">Facilities Equipped</p>
         </div>
       </div>
@@ -515,6 +532,33 @@ body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
 
 <script>
   lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
+
+  // Mobile menu toggle
+  (function(){
+    var btn = document.getElementById('mobileMenuBtn');
+    var menu = document.getElementById('mobileMenu');
+    var iconOpen = document.getElementById('mobileMenuIconOpen');
+    var iconClose = document.getElementById('mobileMenuIconClose');
+    if(!btn || !menu) return;
+
+    function closeMenu(){
+      menu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      btn.setAttribute('aria-expanded','false');
+    }
+    function toggleMenu(){
+      var isHidden = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
+    btn.addEventListener('click', toggleMenu);
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+  })();
 </script>
 </body>
 </html>
