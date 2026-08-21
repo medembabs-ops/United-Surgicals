@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>United Surgicals — Nigeria's Trusted Medical Equipment Partner Since 1991</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue-900:#0B2A6B;
+  --blue-700:#1547C4;
+  --blue-600:#1D64F2;
+  --blue-500:#3B82F6;
+  --blue-100:#E3EDFF;
+  --blue-50:#F5F8FF;
+  --ink:#0F172A;
+  --muted:#64748B;
+}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:#FFFFFF;}
+.font-display{font-family:'Sora',sans-serif;}
+.bg-soft-grid{
+  background-image:radial-gradient(circle at 1px 1px, rgba(29,100,242,0.10) 1px, transparent 0);
+  background-size:28px 28px;
+}
+.text-gradient-blue{background:linear-gradient(to right,#1547C4,#3B82F6);-webkit-background-clip:text;background-clip:text;color:transparent;}
+.shadow-soft{box-shadow:0 10px 40px -12px rgba(21,71,196,0.18);}
+.shadow-card{box-shadow:0 4px 24px -8px rgba(15,23,42,0.08);}
+
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.animate-marquee{animation:marquee 32s linear infinite;}
+.marquee-mask{mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,black 10%,black 90%,transparent);}
+
+@keyframes float-y{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+.animate-float{animation:float-y 5s ease-in-out infinite;}
+
+@keyframes fadeUp{0%{opacity:0;transform:translateY(24px);}100%{opacity:1;transform:translateY(0);}}
+.animate-fadeUp{animation:fadeUp 0.9s cubic-bezier(0.2,0.8,0.2,1) both;}
+.delay-100{animation-delay:.1s;} .delay-200{animation-delay:.2s;} .delay-300{animation-delay:.3s;}
+
+.no-scrollbar::-webkit-scrollbar{display:none;}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2.5">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-[var(--blue-600)] to-[var(--blue-900)] flex items-center justify-center text-white font-display font-bold text-sm shadow-soft">US</div>
+      <span class="font-display font-bold text-lg tracking-tight text-[var(--blue-900)]">United Surgicals</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <a href="#catalog" class="hover:text-[var(--blue-600)] transition-colors">Products</a>
+      <a href="#services" class="hover:text-[var(--blue-600)] transition-colors">Services</a>
+      <a href="#values" class="hover:text-[var(--blue-600)] transition-colors">About Us</a>
+      <a href="#faq" class="hover:text-[var(--blue-600)] transition-colors">Resources</a>
+    </nav>
+    <a href="#contact" class="inline-flex items-center gap-2 rounded-full bg-[var(--blue-600)] text-white text-sm font-semibold px-5 py-2.5 shadow-soft hover:bg-[var(--blue-700)] transition-colors">
+      Get in Touch
+    </a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-soft-grid">
+    <div class="absolute top-[-200px] right-[-200px] w-[600px] h-[600px] bg-[radial-gradient(circle,_rgba(29,100,242,0.14),_transparent_70%)] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-6 pt-20 pb-28 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+      <div class="animate-fadeUp">
+        <div class="inline-flex items-center gap-2 rounded-full border border-[var(--blue-100)] bg-[var(--blue-50)] px-4 py-1.5 mb-7">
+          <span class="w-1.5 h-1.5 rounded-full bg-[var(--blue-600)]"></span>
+          <span class="text-xs font-semibold tracking-wide text-[var(--blue-700)]">33+ Years Serving Nigeria's Healthcare Industry</span>
+        </div>
+
+        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.08] tracking-tight text-[var(--blue-900)] mb-6">
+          Genuine medical equipment,
+          <span class="text-gradient-blue">delivered and installed right.</span>
+        </h1>
+
+        <p class="text-lg text-slate-500 max-w-xl leading-relaxed mb-9">
+          United Surgicals supplies, installs and services certified equipment for theatres, laboratories, wards and diagnostic units — sourced directly from manufacturers so hospitals never overpay for sub-standard imports.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#catalog" class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--blue-600)] text-white font-semibold px-7 py-3.5 shadow-soft hover:bg-[var(--blue-700)] transition-colors">
+            Explore Products <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 text-[var(--blue-900)] font-semibold px-7 py-3.5 hover:bg-slate-50 transition-colors">
+            Talk to an Expert
+          </a>
+        </div>
+      </div>
+
+      <div class="relative animate-fadeUp delay-200">
+        <div class="relative rounded-[2rem] overflow-hidden shadow-soft border border-slate-100">
+          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=1200" alt="Medical team reviewing equipment" class="w-full h-[460px] object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-[var(--blue-900)]/30 via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Floating stat card -->
+        <div class="absolute -bottom-8 -left-8 bg-white rounded-2xl shadow-soft border border-slate-100 px-6 py-5 flex items-center gap-4 animate-float">
+          <div class="w-12 h-12 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)]">
+            <i data-lucide="calendar-check" style="width:22px;height:22px"></i>
+          </div>
+          <div>
+            <p class="font-display font-bold text-2xl text-[var(--blue-900)] leading-none">33+</p>
+            <p class="text-xs text-slate-500 mt-1">Years in Service</p>
+          </div>
+        </div>
+
+        <!-- Floating pill -->
+        <div class="absolute -top-6 -right-6 bg-white rounded-full shadow-soft border border-slate-100 px-5 py-3 flex items-center gap-2">
+          <i data-lucide="shield-check" style="width:16px;height:16px" class="text-[var(--blue-600)]"></i>
+          <span class="text-xs font-semibold text-[var(--blue-900)]">Certified Equipment</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trusted-by marquee -->
+    <div class="border-t border-slate-100 bg-white py-10">
+      <p class="text-center text-xs font-semibold tracking-widest text-slate-400 uppercase mb-6">Trusted by 500+ Hospitals &amp; Clinics Nationwide</p>
+      <div class="relative overflow-hidden marquee-mask">
+        <div class="flex gap-16 w-max animate-marquee">
+          <!-- Two sets for seamless loop -->
+          <div class="flex gap-16 items-center">
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="cross" style="width:20px;height:20px"></i>Theatre Div.</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="flask-conical" style="width:20px;height:20px"></i>LabWorks</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="heart-pulse" style="width:20px;height:20px"></i>CritiCare</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="scan-line" style="width:20px;height:20px"></i>RadImage</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="stethoscope" style="width:20px;height:20px"></i>DiagnoCare</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="baby" style="width:20px;height:20px"></i>NeoNatal Co.</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="bed" style="width:20px;height:20px"></i>WardFit</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="landmark" style="width:20px;height:20px"></i>GovHealth</span>
+          </div>
+          <div class="flex gap-16 items-center">
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="cross" style="width:20px;height:20px"></i>Theatre Div.</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="flask-conical" style="width:20px;height:20px"></i>LabWorks</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="heart-pulse" style="width:20px;height:20px"></i>CritiCare</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="scan-line" style="width:20px;height:20px"></i>RadImage</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="stethoscope" style="width:20px;height:20px"></i>DiagnoCare</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="baby" style="width:20px;height:20px"></i>NeoNatal Co.</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="bed" style="width:20px;height:20px"></i>WardFit</span>
+            <span class="flex items-center gap-2 text-slate-400 font-display font-semibold text-lg"><i data-lucide="landmark" style="width:20px;height:20px"></i>GovHealth</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section id="catalog" class="py-28 bg-[var(--blue-50)]/60">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-14">
+      <div class="lg:col-span-5">
+        <span class="text-xs font-bold tracking-widest text-[var(--blue-600)] uppercase">What We Supply</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-[var(--blue-900)] mt-3 mb-6 leading-tight">
+          Equipment for every department, sourced right the first time
+        </h2>
+        <p class="text-slate-500 leading-relaxed mb-8">
+          From theatre to ward, we equip healthcare facilities with certified, manufacturer-backed products — and the consultancy to know exactly what's needed.
+        </p>
+        <a href="#contact" class="inline-flex items-center gap-2 text-[var(--blue-600)] font-semibold hover:text-[var(--blue-700)] transition-colors">
+          Request a full catalog <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+        </a>
+      </div>
+
+      <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+        <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0"><i data-lucide="cross" style="width:20px;height:20px"></i></div>
+          <div><h3 class="font-display font-semibold text-[var(--blue-900)] mb-1">Theatre &amp; Surgical</h3><p class="text-sm text-slate-500">Anaesthesia machines, autoclaves, ESUs, tables &amp; lights.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0"><i data-lucide="flask-conical" style="width:20px;height:20px"></i></div>
+          <div><h3 class="font-display font-semibold text-[var(--blue-900)] mb-1">Laboratory Equipment</h3><p class="text-sm text-slate-500">Analyzers, centrifuges, incubators &amp; microscopes.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0"><i data-lucide="heart-pulse" style="width:20px;height:20px"></i></div>
+          <div><h3 class="font-display font-semibold text-[var(--blue-900)] mb-1">Critical &amp; Intensive Care</h3><p class="text-sm text-slate-500">Defibrillators, incubators, infusion pumps &amp; more.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0"><i data-lucide="scan-line" style="width:20px;height:20px"></i></div>
+          <div><h3 class="font-display font-semibold text-[var(--blue-900)] mb-1">Diagnostics &amp; Imaging</h3><p class="text-sm text-slate-500">ECG, ultrasound, X-ray &amp; diagnostic sets.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0"><i data-lucide="bed" style="width:20px;height:20px"></i></div>
+          <div><h3 class="font-display font-semibold text-[var(--blue-900)] mb-1">Medical Furniture</h3><p class="text-sm text-slate-500">Hospital beds, cots, lockers &amp; ward fittings.</p></div>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-card border border-slate-100 flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-[var(--blue-50)] flex items-center justify-center text-[var(--blue-600)] shrink-0"><i data-lucide="baby" style="width:20px;height:20px"></i></div>
+          <div><h3 class="font-display font-semibold text-[var(--blue-900)] mb-1">Paediatrics &amp; Infant Care</h3><p class="text-sm text-slate-500">Incubators, radiant warmers &amp; baby scales.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section id="services" class="py-28">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=900" alt="Healthcare facility" class="rounded-[1.75rem] w-full h-[380px] object-cover shadow-soft">
+        <div class="absolute -bottom-10 -right-6 w-52 rounded-2xl overflow-hidden shadow-soft border-4 border-white">
+          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=900&auto=format&fit=crop" alt="Healthcare excellence" class="w-full h-40 object-cover">
+        </div>
+        <div class="absolute top-6 -left-6 bg-white rounded-2xl shadow-soft border border-slate-100 px-5 py-4">
+          <p class="font-display font-bold text-2xl text-[var(--blue-900)] leading-none">500+</p>
+          <p class="text-xs text-slate-500 mt-1">Facilities Equipped</p>
+        </div>
+      </div>
+
+      <div>
+        <span class="text-xs font-bold tracking-widest text-[var(--blue-600)] uppercase">Our Mission</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-[var(--blue-900)] mt-3 mb-6 leading-tight">
+          Providing Nigeria's healthcare industry with genuine, standard equipment
+        </h2>
+        <p class="text-slate-500 leading-relaxed mb-6">
+          Since 1991, we've advised government agencies and private institutions on the right equipment for their scale — then sourced it directly, so facilities are never sold sub-standard or overpriced imports.
+        </p>
+        <p class="text-slate-500 leading-relaxed mb-10">
+          Our manufacturer partners have flown into Nigeria to train our workforce directly, so every client gets equipment backed by real technical support, not just a delivery note.
+        </p>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <p class="font-display font-bold text-3xl text-[var(--blue-900)]">33+</p>
+            <p class="text-sm text-slate-500 mt-1">Years of Expertise</p>
+          </div>
+          <div>
+            <p class="font-display font-bold text-3xl text-[var(--blue-900)]">500+</p>
+            <p class="text-sm text-slate-500 mt-1">Products Supplied</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Principles -->
+  <section id="values" class="py-28 bg-[var(--blue-900)] relative overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.25),_transparent_70%)] pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-blue-300 uppercase">Guided by Values</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-white mt-3">Why hospitals keep choosing us</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-5"><i data-lucide="shield-check" style="width:20px;height:20px"></i></div>
+          <h3 class="font-display font-semibold text-white mb-2">Certified Stock</h3>
+          <p class="text-sm text-blue-100/70 leading-relaxed">Every unit sourced direct from manufacturers, never grey-market or refurbished.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-5"><i data-lucide="globe" style="width:20px;height:20px"></i></div>
+          <h3 class="font-display font-semibold text-white mb-2">Direct Sourcing</h3>
+          <p class="text-sm text-blue-100/70 leading-relaxed">Cutting out middlemen keeps prices honest and lead times short.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-5"><i data-lucide="graduation-cap" style="width:20px;height:20px"></i></div>
+          <h3 class="font-display font-semibold text-white mb-2">Manufacturer Training</h3>
+          <p class="text-sm text-blue-100/70 leading-relaxed">Partners fly in to train your staff, so equipment is used with confidence.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-5"><i data-lucide="truck" style="width:20px;height:20px"></i></div>
+          <h3 class="font-display font-semibold text-white mb-2">Nationwide Delivery</h3>
+          <p class="text-sm text-blue-100/70 leading-relaxed">We coordinate logistics to any facility across Nigeria, urban or remote.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-5"><i data-lucide="wrench" style="width:20px;height:20px"></i></div>
+          <h3 class="font-display font-semibold text-white mb-2">After-Sales Service</h3>
+          <p class="text-sm text-blue-100/70 leading-relaxed">Maintenance and spare parts support long after installation.</p>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-7 hover:bg-white/[0.08] transition-colors">
+          <div class="w-11 h-11 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-300 mb-5"><i data-lucide="landmark" style="width:20px;height:20px"></i></div>
+          <h3 class="font-display font-semibold text-white mb-2">Government Tenders</h3>
+          <p class="text-sm text-blue-100/70 leading-relaxed">Tender-ready documentation and bulk sourcing for public institutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expertise Cards -->
+  <section class="py-28">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-[var(--blue-600)] uppercase">Our Expertise</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-[var(--blue-900)] mt-3">Delivering specialized solutions</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl overflow-hidden shadow-card border border-slate-100 group">
+          <div class="h-48 bg-gradient-to-br from-[var(--blue-600)] to-[var(--blue-900)] flex items-center justify-center">
+            <i data-lucide="cross" class="text-white/80 w-14 h-14"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-[var(--blue-900)] mb-2">Theatre Equipment</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Complete surgical suites — from anaesthesia to lighting and tables.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-card border border-slate-100 group">
+          <div class="h-48 bg-gradient-to-br from-[var(--blue-500)] to-[var(--blue-700)] flex items-center justify-center">
+            <i data-lucide="flask-conical" class="text-white/80 w-14 h-14"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-[var(--blue-900)] mb-2">Laboratory Solutions</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Analyzers and diagnostic instruments for accurate, fast results.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-card border border-slate-100 group">
+          <div class="h-48 bg-gradient-to-br from-[var(--blue-900)] to-slate-900 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="text-white/80 w-14 h-14"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-[var(--blue-900)] mb-2">Critical Care Systems</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">ICU-grade monitoring, defibrillation and life-support equipment.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-card border border-slate-100 group">
+          <div class="h-48 bg-gradient-to-br from-[var(--blue-700)] to-[var(--blue-900)] flex items-center justify-center">
+            <i data-lucide="scan-line" class="text-white/80 w-14 h-14"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-[var(--blue-900)] mb-2">Diagnostic Imaging</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">X-ray, ultrasound and ECG systems for precise, early diagnosis.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-card border border-slate-100 group">
+          <div class="h-48 bg-gradient-to-br from-[var(--blue-600)] to-slate-800 flex items-center justify-center">
+            <i data-lucide="baby" class="text-white/80 w-14 h-14"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-[var(--blue-900)] mb-2">Paediatric &amp; Infant Care</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Incubators and warmers built for the smallest, most vulnerable patients.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-card border border-slate-100 group">
+          <div class="h-48 bg-gradient-to-br from-[var(--blue-500)] to-[var(--blue-900)] flex items-center justify-center">
+            <i data-lucide="clipboard-list" class="text-white/80 w-14 h-14"></i>
+          </div>
+          <div class="p-6">
+            <h3 class="font-display font-semibold text-[var(--blue-900)] mb-2">Procurement Consultancy</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">Needs-assessment and sourcing guidance for facilities of any size.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="py-28 bg-[var(--blue-50)]/60">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold tracking-widest text-[var(--blue-600)] uppercase">Who We Serve</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-[var(--blue-900)] mt-3">One consultancy, three kinds of client</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 shadow-card border border-slate-100 flex flex-col">
+          <h3 class="font-display font-semibold text-lg text-[var(--blue-900)] mb-2">Private Practice</h3>
+          <p class="text-sm text-slate-500 mb-6">Clinics and individual practitioners equipping a first facility.</p>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-[var(--blue-600)] mt-0.5"></i>Starter equipment packages</li>
+            <li class="flex gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-[var(--blue-600)] mt-0.5"></i>Flexible delivery scheduling</li>
+            <li class="flex gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-[var(--blue-600)] mt-0.5"></i>Basic setup guidance</li>
+          </ul>
+          <a href="#contact" class="text-center rounded-full border border-slate-200 py-3 font-semibold text-[var(--blue-900)] hover:bg-slate-50 transition-colors">Get a Quote</a>
+        </div>
+        <div class="bg-[var(--blue-900)] rounded-2xl p-8 shadow-soft border border-[var(--blue-900)] flex flex-col relative">
+          <span class="absolute -top-3 right-8 bg-blue-400 text-[var(--blue-900)] text-xs font-bold px-3 py-1 rounded-full">Most Common</span>
+          <h3 class="font-display font-semibold text-lg text-white mb-2">Private Hospitals</h3>
+          <p class="text-sm text-blue-100/70 mb-6">Multi-ward facilities upgrading or expanding capacity.</p>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex gap-3 text-sm text-blue-50"><i data-lucide="check" class="w-4 h-4 text-blue-300 mt-0.5"></i>Full department fit-outs</li>
+            <li class="flex gap-3 text-sm text-blue-50"><i data-lucide="check" class="w-4 h-4 text-blue-300 mt-0.5"></i>On-site installation &amp; training</li>
+            <li class="flex gap-3 text-sm text-blue-50"><i data-lucide="check" class="w-4 h-4 text-blue-300 mt-0.5"></i>Priority maintenance support</li>
+          </ul>
+          <a href="#contact" class="text-center rounded-full bg-white py-3 font-semibold text-[var(--blue-900)] hover:bg-blue-50 transition-colors">Talk to Our Team</a>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-card border border-slate-100 flex flex-col">
+          <h3 class="font-display font-semibold text-lg text-[var(--blue-900)] mb-2">Government &amp; Institutions</h3>
+          <p class="text-sm text-slate-500 mb-6">Public hospitals and agencies procuring at scale.</p>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-[var(--blue-600)] mt-0.5"></i>Tender-ready documentation</li>
+            <li class="flex gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-[var(--blue-600)] mt-0.5"></i>Bulk sourcing &amp; logistics</li>
+            <li class="flex gap-3 text-sm text-slate-600"><i data-lucide="check" class="w-4 h-4 text-[var(--blue-600)] mt-0.5"></i>Dedicated account manager</li>
+          </ul>
+          <a href="#contact" class="text-center rounded-full border border-slate-200 py-3 font-semibold text-[var(--blue-900)] hover:bg-slate-50 transition-colors">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-28">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <span class="text-xs font-bold tracking-widest text-[var(--blue-600)] uppercase">Resources</span>
+        <h2 class="font-display font-bold text-3xl md:text-4xl text-[var(--blue-900)] mt-3">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-4">
+        <details class="group border border-slate-200 bg-white rounded-2xl open:border-[var(--blue-100)] open:bg-[var(--blue-50)]/50 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none text-[var(--blue-900)] font-semibold">
+            <span>Do you only supply new equipment?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+            We source genuine, certified equipment directly from manufacturers and vetted partners — not the sub-standard or used imports common in parts of the market.
+          </div>
+        </details>
+        <details class="group border border-slate-200 bg-white rounded-2xl open:border-[var(--blue-100)] open:bg-[var(--blue-50)]/50 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none text-[var(--blue-900)] font-semibold">
+            <span>Do you provide installation and training?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+            Yes. Our manufacturing partners have flown into Nigeria to train hospital staff directly, so your team is confident operating new equipment from day one.
+          </div>
+        </details>
+        <details class="group border border-slate-200 bg-white rounded-2xl open:border-[var(--blue-100)] open:bg-[var(--blue-50)]/50 transition-all">
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none text-[var(--blue-900)] font-semibold">
+            <span>Do you deliver outside Lagos?</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 transition-transform group-open:rotate-180"></i>
+          </summary>
+          <div class="px-6 pb-6 text-slate-500 leading-relaxed">
+            We deliver nationwide to government and private facilities across Nigeria, coordinating logistics for single-unit orders and full department fit-outs alike.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="bg-[var(--blue-900)] rounded-[2rem] px-8 py-16 md:px-16 text-center relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.3),_transparent_70%)] pointer-events-none"></div>
+        <div class="relative z-10">
+          <h2 class="font-display font-bold text-3xl md:text-4xl text-white mb-4">Stay Equipped</h2>
+          <p class="text-blue-100/70 max-w-lg mx-auto mb-8">Get procurement tips, new product alerts and maintenance reminders — straight to your inbox.</p>
+          <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input type="email" placeholder="Your email address" class="flex-1 rounded-full px-5 py-3 text-sm text-slate-900 bg-white/95 focus:outline-none focus:ring-2 focus:ring-blue-400">
+            <button type="submit" class="rounded-full bg-white text-[var(--blue-900)] font-semibold px-6 py-3 hover:bg-blue-50 transition-colors">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="border-t border-slate-100 bg-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10 mb-14">
+      <div class="col-span-2 lg:col-span-2">
+        <a href="#" class="flex items-center gap-2 mb-5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-[var(--blue-600)] to-[var(--blue-900)] flex items-center justify-center text-white font-display font-bold text-xs">US</div>
+          <span class="font-display font-bold text-lg text-[var(--blue-900)]">United Surgicals</span>
+        </a>
+        <p class="text-slate-500 text-sm leading-relaxed max-w-xs mb-6">
+          Incorporated in 1991, United Surgicals Limited supplies Nigeria's healthcare industry with high-quality medical equipment and consultancy services.
+        </p>
+        <div class="flex gap-3">
+          <a href="http://twitter.com/unitedsurgicals" class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:text-[var(--blue-600)] hover:bg-[var(--blue-50)] transition-colors"><i data-lucide="twitter" style="width:16px;height:16px"></i></a>
+          <a href="http://www.facebook.com/unitedsurgicals" class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-500 hover:text-[var(--blue-600)] hover:bg-[var(--blue-50)] transition-colors"><i data-lucide="facebook" style="width:16px;height:16px"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-[var(--blue-900)] mb-4 text-sm">Theatre &amp; Care</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Theatre</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Critical Care</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Accident &amp; Emergency</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Mortuary</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-[var(--blue-900)] mb-4 text-sm">Diagnostics</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Laboratory Equipment</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Diagnostics</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">X-ray &amp; Sonography</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Ophthalmology</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-[var(--blue-900)] mb-4 text-sm">Ward &amp; Home</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Medical Furniture</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Paediatrics &amp; Infant Care</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Physiotherapy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-semibold text-[var(--blue-900)] mb-4 text-sm">Company</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">About Us</a></li>
+          <li><a href="#services" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Services</a></li>
+          <li><a href="#" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Clientele</a></li>
+          <li><a href="#contact" class="text-slate-500 hover:text-[var(--blue-600)] transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-xs text-slate-400">© 2026 United Surgicals Limited. All Rights Reserved.</p>
+      <div class="flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+        <span class="text-xs text-slate-400">All systems operational</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  lucide.createIcons({ attrs: { 'stroke-width': 1.6 } });
+</script>
+</body>
+</html>
